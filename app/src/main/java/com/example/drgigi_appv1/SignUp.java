@@ -249,7 +249,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
             @Override
             public void onClick(View v) {
                 //progressDialog = ProgressDialog.show(SignUp.this,"Loading.....",null,true,true);
-                /*if (fullName.getText().toString().equals("") || email.getText().toString().equals("") || phoneNumber.getText().toString().equals("")
+                if (fullName.getText().toString().equals("") || email.getText().toString().equals("") || phoneNumber.getText().toString().equals("")
                         || password.getText().toString().equals("") || alamat_rumah.getText().toString().equals("")
                         || alamat_korespondensi.getText().toString().equals("")
                         || ttl.getText().toString().equals("")|| ttl.getText().toString().equals("")
@@ -268,9 +268,9 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
                     ktp.setFocusable(false);
 
                     showSnackbar();
-                } else {*/
+                } else {
                     register();
-                //}
+                }
             }
         });
 
@@ -388,7 +388,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         String d_ttl = String.valueOf(ttl.getText());
         String d_kta = String.valueOf(no_kta.getText());
 
-        /*if (d_name.equals("")) {
+        if (d_name.equals("")) {
             showSnackbar();
         } else if (d_mail.equals("")) {
             showSnackbar();
@@ -420,7 +420,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
             showSnackbar();
 
 
-        } else {*/
+        } else {
 
             // Toast.makeText(SignUp.this,"Tombol sign up di tekan",Toast.LENGTH_LONG).show();
             retrofit2.Call<DefaultResponse> call = RetrofitClient
@@ -463,7 +463,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             }
-        //}
+        }
     }
 
     public void backSignin() {

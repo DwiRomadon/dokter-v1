@@ -168,8 +168,12 @@ public class RegisterGambarMahasiswa extends AppCompatActivity {
                 if (serverResponse != null) {
                     if (serverResponse.getSuccess() == false) {
                         Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        Intent a = new Intent(RegisterGambarMahasiswa.this, SignIn.class);
+                        startActivity(a);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+
                     }
                 } else {
                     assert serverResponse != null;
